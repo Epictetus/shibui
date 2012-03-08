@@ -18,7 +18,7 @@ In Terminal:
 * `git clone git://github.com/heroku/shibui.git`
 * `cd shibui`
 * `sudo gem build shibui.gemspec`
-* `sudo gem install shibui-0.1.gem`
+* `sudo gem install shibui-0.0.1.gem`
 
 To create your first project
 ----------------------------
