@@ -1,7 +1,7 @@
 Shibui for Compass
 ==================
 
-To create your first project, you'll need to have the Shibui gem installed, this will include all the necessary dependencies.
+To create your first project, you'll need to have the [Shibui](http://en.wikipedia.org/wiki/Shibui) gem installed, this will include all the necessary dependencies.
 
 To install locally
 ------------------
