@@ -25,6 +25,6 @@ Now you should have a new project folder created with the Shibui file structure,
 To add Shibui to an existing project
 ------------------------------------
 
-* Add `require "shibui"`
+* `require "shibui"`
 * `cd path/to/your-project`
-* run: `compass install shibui`
+* `compass install shibui`
