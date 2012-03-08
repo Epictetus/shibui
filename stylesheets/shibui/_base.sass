@@ -1,0 +1,92 @@
+@import "compass/reset"
+
+@import "compass/typography/vertical_rhythm"
+@include establish-baseline
+
+body
+  background: #1b1b24
+  color: #8487af
+  @include helvetica-fontstack
+
+p
+  margin: 0 0 $base-line-height
+
+#{headings(all)}
+  color: #fff
+
+h1
+  @include corbel-fontstack
+  @include font-size(36px)
+  line-height: $base-line-height*2
+  margin: $base-line-height*2 0
+
+h2
+  @include corbel-fontstack
+  @include font-size(28px)
+  line-height: $base-line-height*2
+  margin: $base-line-height 0
+
+h3
+  @include corbel-fontstack
+  @include font-size(22px)
+  line-height: $base-line-height*2
+  margin: $base-line-height 0
+
+h4
+  @include corbel-fontstack
+  @include font-size(18px)
+  margin: $base-line-height 0
+
+h5
+  @include font-size(16px)
+
+h6
+  font-weight: bold
+
+// Missing blockquotes
+
+ul, ol
+  margin: 0 0 $base-line-height
+
+ul
+  list-style: disc
+  padding-left: 16px
+
+ol
+  list-style: decimal
+  padding-left: 19px
+
+pre
+  background: #111116
+  @include border-radius(3px)
+  @include box-shadow(0 1px 0 rgba(255, 255, 255, .02), 0 1px 2px rgba(0, 0, 0, .25) inset)
+  overflow: auto
+  margin: 0 0 $base-line-height
+  padding: $base-line-height
+
+hr
+  background: #17171e
+  @include box-shadow(0 0 0 1px rgba(255, 255, 255, .02), 0 0 0 1px #101015 inset)
+  border: 0
+  height: 3px
+  margin: 0 0 $base-line-height
+
+a
+  &:link,
+  &:visited
+    color: #9782ff
+    text-decoration: none
+
+  &:hover,
+  &:active
+    text-decoration: underline
+
+em
+  font-style: italic
+
+strong
+  font-weight: bold
+
+code
+  @include meslo-fontstack
+  @include font-size(12px)
