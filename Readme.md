@@ -3,13 +3,6 @@ Shibui for Compass
 
 To create your first project, you'll need to have the Shibui gem installed, this will include all the necessary dependencies.
 
-To install from Ruby Gems
--------------------------
-
-In Terminal:
-
-* `(sudo) gem install shibui`
-
 To install locally
 ------------------
 
