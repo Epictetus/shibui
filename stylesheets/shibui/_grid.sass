@@ -1,0 +1,134 @@
+$grid-min-width: 728px !default
+$grid-max-width: 1200px !default
+
+@import "compass/utilities/general/clearfix"
+
+.container
+  padding: 0 20px
+
+.row
+  max-width: $grid-max-width
+  margin: 0 auto
+  min-width: $grid-min-width
+  @include pie-clearfix
+  width: 100%
+
+  .row
+    min-width: 0
+
+.columns
+  float: left
+  margin-left: 4.4%
+  min-height: 1px
+
+  &:first-child
+    margin-left: 0
+
+[class*="column"] + [class*='column']:last-child
+  float: right
+
+// The code below doesn't leverage the awesomeness of SASS.
+// We can refactor it to use a while loop.
+//
+// $number-of-columns: 12
+// $i: 1
+//
+// .columns
+//   @while $i <= $number-of-columns
+//     &.span#{$i}
+//       width: width_calculation
+//     $i: $i+1
+
+.columns
+  &.span1
+    width: 4.3%
+  &.span2
+    width: 13%
+  &.span3
+    width: 21.679%
+  &.span4
+    width: 30.37%
+  &.span5
+    width: 39.1%
+  &.span6
+    width: 47.8%
+  &.span7
+    width: 56.5%
+  &.span8
+    width: 65.2%
+  &.span9
+    width: 73.9%
+  &.span10
+    width: 82.6%
+  &.span11
+    width: 91.3%
+  &.span12
+    width: 100%
+
+  &.offset1
+    margin-left: 13.1%
+
+    &:first-child
+      margin-left: 8.7%
+
+  &.offset2
+    margin-left: 21.8%
+
+    &:first-child
+      margin-left: 17.4%
+
+  &.offset3
+    margin-left: 30.5%
+
+    &:first-child
+      margin-left: 26.1%
+
+  &.offset4
+    margin-left: 39.2%
+
+    &:first-child
+      margin-left: 34.8%
+
+  &.offset5
+    margin-left: 47.9%
+
+    &:first-child
+      margin-left: 43.5%
+
+  &.offset6
+    margin-left: 56.6%
+
+    &:first-child
+      margin-left: 52.2%
+
+  &.offset7
+    margin-left: 65.3%
+
+    &:first-child
+      margin-left: 60.9%
+
+  &.offset8
+    margin-left: 74.0%
+
+    &:first-child
+      margin-left: 69.6%
+
+  &.offset9
+    margin-left: 82.7%
+
+    &:first-child
+      margin-left: 78.3%
+
+  &.offset10
+    margin-left: 91.4%
+
+    &:first-child
+      margin-left: 87.0%
+
+  &.offset11
+    &:first-child
+      margin-left: 95.7%
+
+  .centered
+    float: none
+    margin: 0 auto
