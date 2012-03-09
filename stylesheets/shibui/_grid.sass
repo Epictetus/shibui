@@ -27,35 +27,6 @@ $grid-max-width: 1200px !default
 [class*="column"] + [class*='column']:last-child
   float: right
 
-// The code below doesn't leverage the awesomeness of SASS.
-// We can refactor it to use a while loop.
-//
-// $number-of-columns: 12
-// $i: 1
-//
-// .columns
-//   @while $i <= $number-of-columns
-//     &.span#{$i}
-//       width: width_calculation
-//     $i: $i+1
-
-// @mixin span($number-of-columns)
-//   12
-//     width: 4.3%
-//     background-color: white
-
-// The code below doesn't leverage the awesomeness of SASS.
-// We can refactor it to use a while loop.
-//
-// $number-of-columns: 12
-// $i: 1
-//
-// .columns
-//   @while $i <= $number-of-columns
-//     &.span#{$i}
-//       width: width_calculation
-//     $i: $i+1
-
 
 // 1. Ideally, we should return a well % width using the next function
 // ------------------------------------------------------------------------
@@ -63,34 +34,43 @@ $grid-max-width: 1200px !default
 // @function column-width($n, $col-width, $gutter-width: $gutter-width)
 //   @return $col-width * $n + $gutter-width * ($n - 1)
 
+@function col-width($num-col)
+  @if $num-col == 1
+    @return 4.3%
+  @if $num-col == 2
+    @return 13%
+  @if $num-col == 3
+    @return 21.679%
+  @if $num-col == 4
+    @return 30.37%
+  @if $num-col == 5
+    @return 39.1%
+  @if $num-col == 6
+    @return 47.8%
+  @if $num-col == 7
+    @return 56.5%
+  @if $num-col == 8
+    @return 65.2%
+  @if $num-col == 9
+    @return 73.9%
+  @if $num-col == 10
+    @return 82.6%
+  @if $num-col == 11
+    @return 91.3%
+  @if $num-col == 12
+    @return 100%
 
-// 2. And use it here
+
+// 2.1. And use it here
 // ------------------------------------------------------------------------
-@mixin span($num-column)
-  @if $num-column == 1
-    width: 4.3%
-  @if $num-column == 2
-    width: 13%
-  @if $num-column == 3
-    width: 21.679%
-  @if $num-column == 4
-    width: 30.37%
-  @if $num-column == 5
-    width: 39.1%
-  @if $num-column == 6
-    width: 47.8%
-  @if $num-column == 7
-    width: 56.5%
-  @if $num-column == 8
-    width: 65.2%
-  @if $num-column == 9
-    width: 73.9%
-  @if $num-column == 10
-    width: 82.6%
-  @if $num-column == 11
-    width: 91.3%
-  @if $num-column == 12
-    width: 100%
+@mixin span($num-col)
+  width: col-width($num-col)
+
+// 2.2. Or here
+// ------------------------------------------------------------------------
+@for $num-col from 1 through 12
+  [data-span="col-#{$num-col}"]
+    width: col-width($num-col)
 
 .columns
   &.offset1
