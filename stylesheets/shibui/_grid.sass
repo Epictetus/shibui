@@ -39,32 +39,60 @@ $grid-max-width: 1200px !default
 //       width: width_calculation
 //     $i: $i+1
 
-.columns
-  &.span1
+// @mixin span($number-of-columns)
+//   12
+//     width: 4.3%
+//     background-color: white
+
+// The code below doesn't leverage the awesomeness of SASS.
+// We can refactor it to use a while loop.
+//
+// $number-of-columns: 12
+// $i: 1
+//
+// .columns
+//   @while $i <= $number-of-columns
+//     &.span#{$i}
+//       width: width_calculation
+//     $i: $i+1
+
+
+// 1. Ideally, we should return a well % width using the next function
+// ------------------------------------------------------------------------
+
+// @function column-width($n, $col-width, $gutter-width: $gutter-width)
+//   @return $col-width * $n + $gutter-width * ($n - 1)
+
+
+// 2. And use it here
+// ------------------------------------------------------------------------
+@mixin span($num-column)
+  @if $num-column == 1
     width: 4.3%
-  &.span2
+  @if $num-column == 2
     width: 13%
-  &.span3
+  @if $num-column == 3
     width: 21.679%
-  &.span4
+  @if $num-column == 4
     width: 30.37%
-  &.span5
+  @if $num-column == 5
     width: 39.1%
-  &.span6
+  @if $num-column == 6
     width: 47.8%
-  &.span7
+  @if $num-column == 7
     width: 56.5%
-  &.span8
+  @if $num-column == 8
     width: 65.2%
-  &.span9
+  @if $num-column == 9
     width: 73.9%
-  &.span10
+  @if $num-column == 10
     width: 82.6%
-  &.span11
+  @if $num-column == 11
     width: 91.3%
-  &.span12
+  @if $num-column == 12
     width: 100%
 
+.columns
   &.offset1
     margin-left: 13.1%
 
