@@ -1,9 +1,7 @@
-require './lib/shibui'
-
 Gem::Specification.new do |s|
 
-  s.version = Shibui::VERSION
-  s.date    = Shibui::DATE
+  s.version = "0.0.1"
+  s.date    = "2012-03-08"
 
   s.name = "shibui"
   s.authors = ["Maximilian Schoening"]
@@ -18,7 +16,6 @@ Gem::Specification.new do |s|
   s.files += Dir.glob("templates/**/*.*")
 
   s.has_rdoc = false
-  s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.6}
   s.add_dependency("compass", [">= 0.11.5"])
 
