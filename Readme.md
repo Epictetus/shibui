@@ -8,7 +8,7 @@ To install locally
 
 In Terminal:
 
-* `git clone git@github.com/heroku/shibui.git`
+* `git clone git@github.com:heroku/shibui.git`
 * `cd shibui`
 * `sudo gem build shibui.gemspec`
 * `sudo gem install shibui-0.0.1.gem`
@@ -36,7 +36,7 @@ If you want to make changes to the Shibui plugin and see the effects locally fol
 
 * `mkdir shibui-dojo`
 * `cd shibui-dojo`
-* `git clone git@github.com/heroku/shibui.git`
+* `git clone git@github.com:heroku/shibui.git`
 * `compass create sample-project -l ../shibui`
 * `cd sample-project`
 * `compass watch`
