@@ -41,8 +41,8 @@ If you want to make changes to the Shibui plugin and see the effects locally fol
 * `cd sample-project`
 * `compass watch`
 
-LiveReload
-----------
+Shibui development with LiveReload
+----------------------------------
 
 [LiveReload](http://livereload.com/) is a great way to have your browser automagically refresh when changes to your project are made. Unfortunately LiveReload will not recognize changes to partials within a Compass extension. As a workaround:
 
