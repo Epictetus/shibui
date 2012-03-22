@@ -2,6 +2,8 @@ description 'Shibui Compass Gem'
 
 stylesheet 'sass/screen.sass', :to => 'screen.sass', :media => "screen, projector"
 
+image 'input-focus-bg.png'
+
 html 'index.html'
 
 help %Q{

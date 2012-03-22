@@ -1,6 +1,7 @@
-// Import all of Shibui
 @import "shibui"
 
-// Import specifics
-// @import "shibui/base"
-// @import "shibui/buttons"
+.container
+  @include leader($lines: 2, $property: padding)
+  margin: 0 auto
+  @include trailer($lines: 2, $property: padding)
+  width: 640px
