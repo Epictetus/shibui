@@ -1,8 +1,10 @@
-@import "shibui"
+@import "shared"
 
-.container
+.hero
+  text-align: center
   @include leader($lines: 2, $property: margin)
-  margin-left: auto
-  margin-right: auto
+  text-transform: lowercase
   @include trailer($lines: 2, $property: margin)
-  width: 640px
+
+  h2
+    color: #a292ff
