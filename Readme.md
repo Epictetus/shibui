@@ -38,7 +38,7 @@ end```
 In Terminal:
 
 * `bundle`
-* `bundle exec compass install shibui`
+* `bundle exec compass install shibui` or `bundle exec compass install shibui -x sass` if you prefer sass syntax instead of scss
 
 To work on Shibui
 -----------------
