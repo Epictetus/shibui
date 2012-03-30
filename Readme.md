@@ -22,12 +22,23 @@ To create your first project
 
 Now you should have a new project folder created with the Shibui file structure, but with the awesome advantages of having all the css pre-processed with Sass.
 
-To add Shibui to an existing project
-------------------------------------
+To add Shibui to an existing Rails project
+------------------------------------------
 
-* `cd path/to/your-compass-ready-project`
-* `require "shibui"`
-* `compass install shibui`
+* Add it to your gemfile
+
+```# Gemfile
+group :assets do
+  gem 'compass-rails'
+  gem 'shibui', :git => 'git@github.com:heroku/shibui.git'
+end```
+
+* Add `require "shibui"` to your `application.rb`
+
+In Terminal:
+
+* `bundle`
+* `bundle exec compass install shibui`
 
 To work on Shibui
 -----------------
